@@ -1,0 +1,198 @@
+[0;33m# MDS setup check 2023.1[0m
+
+[0;33m## Operating system[0m
+ProductName:		macOS
+ProductVersion:		14.4
+BuildVersion:		23E214
+
+MISSING You need macOS Big Sur or greater (>=11.4).
+
+[0;33m## System programs[0m
+MISSING   postgreSQL 15.*
+MISSING   rstudio 2023.06.*
+MISSING   R=4.*
+OK        python 3.12.2
+OK        conda 4.1.2
+OK        bash 3.2.57(1)-release (arm64-apple-darwin23)
+OK        git 2.39.3 (Apple Git-146)
+OK        make 3.81
+MISSING   latex=3.*
+MISSING   tlmgr=5.*
+MISSING   docker=24.*
+MISSING   code=1.*
+
+[0;33m## Python packages[0m
+OK        otter-grader=5.5.0
+OK        pandas=2.2.1
+OK        nbconvert-core=7.16.2
+OK        playwright=1.42.0
+OK        jupyterlab=4.1.4
+OK        jupyterlab-git=0.50.0
+OK        jupyterlab-spellchecker=0.8.4
+MISSING   jupyterlab PDF-generation failed. Check that latex and jupyterlab are marked OK above, then read the detailed error message in the log file.
+OK        jupyterlab WebPDF-generation was successful.
+OK        jupyterlab HTML-generation was successful.
+
+[0;33m## R packages[0m
+Please install 'R' to check R package versions.
+Please install 'R' before testing PDF and HTML generation.
+
+======== You had the following errors during Jupyter PDF generation ========
+Traceback (most recent call last):
+  File "/Users/petrshuklin/miniconda3/bin/jupyter-nbconvert", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/jupyter_core/application.py", line 283, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/templateexporter.py", line 386, in from_filename
+    return super().from_filename(filename, resources, **kw)  # type:ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/templateexporter.py", line 392, in from_file
+    return super().from_file(file_stream, resources, **kw)  # type:ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/pdf.py", line 197, in from_notebook_node
+    self.run_latex(tex_file)
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/pdf.py", line 166, in run_latex
+    return self.run_command(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/petrshuklin/miniconda3/lib/python3.12/site-packages/nbconvert/exporters/pdf.py", line 120, in run_command
+    raise OSError(msg)
+OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+======== End of Jupyter PDF error ========
+
+[0;33m## Environmental variables[0m
+GIT_PS1_SHOWDIRTYSTATE=1
+TERM_PROGRAM=Apple_Terminal
+SHELL=/bin/bash
+TERM=xterm-256color
+CLICOLOR=1
+TMPDIR=/var/folders/kq/0sqkwb3s7cd4g7lffs2l4z800000gn/T/
+CONDA_SHLVL=1
+CONDA_PROMPT_MODIFIER=(base) 
+TERM_PROGRAM_VERSION=453
+TERM_SESSION_ID=DA56A3DA-BADC-4AD7-AC73-A90D65A30116
+USER=petrshuklin
+CONDA_EXE=/Users/petrshuklin/miniconda3/bin/conda
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.1T52g3R5rf/Listeners
+BASH_SILENCE_DEPRECATION_WARNING=1
+LSCOLORS=ExGxFxdxCxDxDxxbaDecac
+_CE_CONDA=
+PATH=/Users/petrshuklin/miniconda3/bin:/Users/petrshuklin/miniconda3/condabin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+LaunchInstanceID=24E0BE43-F277-4406-A76B-00B98B72021D
+CONDA_PREFIX=/Users/petrshuklin/miniconda3
+__CFBundleIdentifier=com.apple.Terminal
+PWD=/Users/petrshuklin/recipe
+LANG=en_CA.UTF-8
+XPC_FLAGS=0x0
+_CE_M=
+XPC_SERVICE_NAME=0
+SHLVL=3
+HOME=/Users/petrshuklin
+CONDA_PYTHON_EXE=/Users/petrshuklin/miniconda3/bin/python
+LOGNAME=petrshuklin
+CONDA_DEFAULT_ENV=base
+SECURITYSESSIONID=186a3
+_=/usr/bin/env
+
+[0;33m## Content of .bash_profile[0m
+# Set the default editor for programs launch from terminal
+EDITOR="code --wait"
+VISUAL=$EDITOR  # Use the same value as for "EDITOR" in the line above
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/petrshuklin/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/petrshuklin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/petrshuklin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/petrshuklin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Silence default shell note when launching bash
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Load the git prompt script
+source ~/.git-prompt.sh
+# Show unstaged (*) and staged (+) changes in the prompt string
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# Color text so it is easier to distinguish elements from each other
+export CLICOLOR=1
+export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
+# Color the prompt string and add git info
+export PS1=${CONDA_PROMPT_MODIFIER}'\[\033[01;32m\]\u@\h\[\033[01;35m\] \w\[\033[34m\]$(__git_ps1 " (%s)")\[\033[00m\]\n\$ '
+
+# TAB completion configuration
+# TAB completion ignores case
+bind "set completion-ignore-case on"
+# Require only one instead of two TAB presses before showing matches
+bind "set show-all-if-ambiguous on"
+# Unfortunately the tab cycling does not work together with single tab match expansion on macOS
+# since bash is too old, so I have commented out the option below,
+# but feel free to remove the leading `#` if you want to test it out.
+# If there are multiple matches for completion, cycle through them with TAB
+# bind 'TAB':menu-complete
+
+# History configuration
+# Cycle through history based on characters already typed on the line
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+# Append to the history file, don't overwrite it.
+shopt -s histappend
+# Write commands to history one-by-one right after they are executed
+# instead of all together when the terminal is closed.
+# Make new terminals see all commands run in currently open terminals and
+# prepend a newline to the prompt string to separate it from the last command's output
+PROMPT_COMMAND='history -a; echo'
+# Increase history size
+HISTSIZE=50000
+HISTFILESIZE=50000
+
+# Aliases and functions
+# Note that aliases only are in effect when you are using the shell interactively
+# (e.g. opening the terminal and typing or pasting commands).
+# If you run a bash script or makefile,
+# the original command is used instead of your alias.
+# ---
+# Some common operations
+alias l='ls -lthAF'
+alias jl='jupyter lab'
+alias ca='conda activate'
+alias gl='git log --date short -10 --pretty=format:"%C(auto,yellow)%h %C(auto,blue)%ad%C(auto)%d %C(auto,reset)%s"'
+alias gt='git status'
+alias gm='git commit -m'
+alias gap='git add -p'
+# Move, remove, and copy show what was done and prompt before overwriting files.
+alias rm="rm -vi"
+alias mv="mv -vi"
+alias cp="cp -vi"
+alias mkdir="mkdir -vp"
+# Case insensitive grep by default
+alias grep='grep -i'
+
+[0;33m## Content of .bashrc[0m
+if [ -f ~/.bash_profile ]; then . ~/.bash_profile; fi
